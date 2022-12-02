@@ -1,0 +1,12 @@
+﻿@model List<MyDesserts.Data.Dessert>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>Here are some options for you--</h1>
+<hr />
+@foreach (var item in Model)
+{
+    <h2>@item.DessertName</h2>
+    <img src="~/images/desserts/@item.DessertImage" />
+    <hr />
+}  

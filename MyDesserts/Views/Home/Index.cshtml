@@ -1,0 +1,14 @@
+﻿@model List<MyDesserts.Data.DessertCategory>
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>What will you prefer in Dessert?</h1>
+<form method="post" action="@Url.Action("Desserts","home")">
+    <select name="DessertCategory" id=DessertCategory>
+        @foreach (var item in Model)
+        {
+            <option value="@item.ID">@item.CategoryName</option>
+        }
+    </select>
+    <button type="submit">OK</button>
+</form>
